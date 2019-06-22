@@ -25,9 +25,9 @@ Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
     BaselineSolution.new.reconcile_helper(array1, array2)
   end
 
-  # lee = x.report("lee:") do
+  lee = x.report("lee:") do
   #   LeeSolution.new.reconcile_helper(array1, array2)
-  # end
+  end
 
   sal = x.report("sal:") do
     SalSolution.new.reconcile_helper(array1, array2)
