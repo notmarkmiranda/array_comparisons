@@ -20,8 +20,8 @@ puts "Array #1 - #{array1.count}"
 puts "Array #2 - #{array2.count}"
 
 Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
-  mark = x.report("mark:") do
-    MarkSolution.new.reconcileHelper(array1, array2)
+  baseline_solution = x.report("baseline:") do
+    BaselineSolution.new.reconcileHelper(array1, array2)
   end
 
   lee = x.report("lee:") do
