@@ -2,6 +2,7 @@ require 'benchmark'
 require './baseline_solution'
 require './lee_solution'
 require './sal_solution'
+require './mark_solution'
 include Benchmark
 
 def create_random_array
@@ -21,14 +22,18 @@ puts "Array #2 - #{array2.count}"
 
 Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
   baseline_solution = x.report("baseline:") do
-    BaselineSolution.new.reconcileHelper(array1, array2)
+    BaselineSolution.new.reconcile_helper(array1, array2)
   end
 
-  lee = x.report("lee:") do
-    LeeSolution.new.reconcile_helper(array1, array2)
-  end
+  # lee = x.report("lee:") do
+  #   LeeSolution.new.reconcile_helper(array1, array2)
+  # end
 
   sal = x.report("sal:") do
     SalSolution.new.reconcile_helper(array1, array2)
+  end
+
+  mark = x.report("mark:") do
+    MarkSolution.new.reconcile_helper(array1, array2)
   end
 end
