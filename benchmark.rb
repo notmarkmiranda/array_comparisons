@@ -19,7 +19,7 @@ puts "Number of elements in each array:"
 puts "Array #1 - #{array1.count}"
 puts "Array #2 - #{array2.count}"
 
-Benchmark.benchmark(CAPTION, 7, FORMAT, ">total:", ">avg:") do |x|
+Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
   mark = x.report("mark:") do
     MarkSolution.new.reconcileHelper(array1, array2)
   end
