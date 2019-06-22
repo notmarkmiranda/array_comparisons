@@ -1,5 +1,5 @@
 require 'benchmark'
-require './mark_solution'
+require './baseline_solution'
 require './lee_solution'
 require './sal_solution'
 include Benchmark

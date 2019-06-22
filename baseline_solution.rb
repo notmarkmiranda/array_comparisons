@@ -1,4 +1,4 @@
-class MarkSolution
+class BaselineSolution
   def reconcileHelper(arr1, arr2)
       not_in_arr2 = []
       not_in_arr1 = []
